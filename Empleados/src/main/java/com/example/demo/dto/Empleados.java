@@ -12,11 +12,11 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Table(name = "Empleados") // en caso que la tabla sea diferente
+@Table(name = "empleados") // en caso que la tabla sea diferente
 public class Empleados {
 
 	// ENUM
-	public enum Trabajos {
+	public enum trabajos {
 		DESARROLLADOR, CONTADOR, ADMINISTRADOR, AUXILIAR
 	}
 
@@ -35,7 +35,7 @@ public class Empleados {
 	private Double salario;
 
 	@Column(name = "trabajo")
-	private Trabajos trabajo;
+	private trabajos trabajo;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "fecha")
@@ -55,7 +55,7 @@ public class Empleados {
 	 * @param fecha
 	 */
 
-	public Empleados(Long id, String nombre, String apellido, Double salario, Trabajos trabajo, Date fecha) {
+	public Empleados(Long id, String nombre, String apellido, Double salario, trabajos trabajo, Date fecha) {
 
 		this.id = id;
 		this.nombre = nombre;
@@ -117,14 +117,14 @@ public class Empleados {
 	/**
 	 * @return the trabajo
 	 */
-	public Trabajos getTrabajo() {
+	public trabajos getTrabajo() {
 		return trabajo;
 	}
 
 	/**
 	 * @param trabajo the trabajo to set
 	 */
-	public void setTrabajo(Trabajos trabajo) {
+	public void setTrabajo(trabajos trabajo) {
 		
 		switch(trabajo) {
 		case DESARROLLADOR:
