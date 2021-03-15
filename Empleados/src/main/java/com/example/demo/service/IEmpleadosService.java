@@ -3,6 +3,7 @@ package com.example.demo.service;
 import java.util.List;
 
 import com.example.demo.dto.Empleados;
+import com.example.demo.dto.Empleados.trabajos;
 
 public interface IEmpleadosService {
 	
@@ -15,7 +16,7 @@ public interface IEmpleadosService {
 	
 	public List<Empleados> listarEmpleadoNombre(String nombre);//Listar empleados por campo nombre
 	
-	public List<Empleados> listarEmpleadoTrabajo(String trabajo);//Listar empleados por campo trabajo
+	public List<Empleados> listarEmpleadoTrabajo(trabajos trabajo);//Listar empleados por campo trabajo
 	
 	public Empleados actualizarEmpleado(Empleados empleado);//Actiañoza datos del empleado UPDATE
 	

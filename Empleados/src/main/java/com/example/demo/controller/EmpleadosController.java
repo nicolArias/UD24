@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.dto.Empleados;
+import com.example.demo.dto.Empleados.trabajos;
 import com.example.demo.service.EmpleadosServiceImpl;
 
 
@@ -36,7 +37,7 @@ public class EmpleadosController {
 	
 	//Listar empleados por campo trabajo
 	@GetMapping("/empleados/trabajo/{trabajo}")
-	public List<Empleados> listarEmpleadosTrabajo(@PathVariable(name="trabajo") String trabajo){
+	public List<Empleados> listarEmpleadosTrabajo(@PathVariable(name="trabajo") trabajos trabajo){
 			return empleadosServiceImpl.listarEmpleadoTrabajo(trabajo);
 		
 	}

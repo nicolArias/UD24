@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.dao.IEmpleadosDAO;
 import com.example.demo.dto.Empleados;
+import com.example.demo.dto.Empleados.trabajos;
 
 @Service
 public class EmpleadosServiceImpl implements IEmpleadosService{
@@ -39,7 +40,7 @@ public class EmpleadosServiceImpl implements IEmpleadosService{
 	}
 	
 	@Override
-	public List<Empleados> listarEmpleadoTrabajo(String trabajo) {
+	public List<Empleados> listarEmpleadoTrabajo(trabajos trabajo) {
 		return iEmpleadosDAO.findByTrabajo(trabajo);
 	}
 

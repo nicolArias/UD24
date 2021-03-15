@@ -3,6 +3,7 @@ package com.example.demo.dao;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.demo.dto.Empleados;
+import com.example.demo.dto.Empleados.trabajos;
 
 /*
  *@author Nicol 
@@ -16,5 +17,5 @@ public interface IEmpleadosDAO extends JpaRepository<Empleados,Long> {
 	public List<Empleados> findByNombre(String nombre);
 	
 	//Listar empleados por campo trabajo
-	public List<Empleados> findByTrabajo(String trabajo);
+	public List<Empleados> findByTrabajo(trabajos trabajo);
 }
